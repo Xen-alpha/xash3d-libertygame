@@ -5,7 +5,7 @@ ifeq ($(CC),cc)
 endif
 my-dir := $(shell pwd)
 PROJECT_DIR ?= $(shell pwd)
-MICRONDK_DIR ?= /home/senouis/xash3d/microndk
+MICRONDK_DIR ?= $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
 SYSROOT_DIR ?= 
 ifneq ($(SYSROOT_DIR),)
 	SYSROOT_CFLAGS = -I$(SYSROOT_DIR)/include

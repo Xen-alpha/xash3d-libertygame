@@ -290,7 +290,16 @@ returns username for current profile
 */
 char *Sys_GetCurrentUser( void )
 {
-#if defined(_WIN32)
+#if defined(__EMSCRIPTEN__)
+	static char *s_userName;
+	int mwExist = EM_ASM_INT_V({ 
+		return typeof(mw) !== 'undefined' ? 1 : 0 ;
+	});
+	if (!mwExist) return "Player";
+	// now we have mw object, get the username
+	s_userName = emscripten_run_script_string("mw.user.getName()");
+	return strcmp(s_userName, "null") != 0 ? s_userName : "Player";
+#elif defined(_WIN32)
 
 	static string	s_userName;
 	unsigned long size = sizeof( s_userName );
