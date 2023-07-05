@@ -72,13 +72,13 @@ void CMenuMultiplayer::_Init( void )
 		EngFuncs::CvarSetValue( "cl_predict", 1.0f );
 		EngFuncs::CvarSetValue( "menu_mp_firsttime", 0.0f );
 
-		UI_PlayerIntroduceDialog_Show( &uiMultiPlayer );
+		// UI_PlayerIntroduceDialog_Show( &uiMultiPlayer );
 	});
 	SET_EVENT_MULTI( msgBox.onNegative,
 	{
 		EngFuncs::CvarSetValue( "menu_mp_firsttime", 0.0f );
 
-		UI_PlayerIntroduceDialog_Show( &uiMultiPlayer );
+		// UI_PlayerIntroduceDialog_Show( &uiMultiPlayer );
 	});
 	msgBox.Link( this );
 
@@ -110,9 +110,11 @@ void UI_MultiPlayer_Menu( void )
 	{
 		uiMultiPlayer.AskPredictEnable();
 	}
+	/*
 	else if( !UI::Names::CheckIsNameValid( EngFuncs::GetCvarString( "name" ) ) )
 	{
 		UI_PlayerIntroduceDialog_Show( &uiMultiPlayer );
 	}
+	*/
 }
 ADD_MENU( menu_multiplayer, UI_MultiPlayer_Precache, UI_MultiPlayer_Menu );

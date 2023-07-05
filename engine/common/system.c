@@ -291,14 +291,14 @@ returns username for current profile
 char *Sys_GetCurrentUser( void )
 {
 #if defined(__EMSCRIPTEN__)
-	static char *s_userName;
+	static string s_userName;
 	int mwExist = EM_ASM_INT_V({ 
-		return typeof(mw) !== 'undefined' ? 1 : 0 ;
+		return typeof(mw) === 'object' ? 1 : 0 ;
 	});
-	if (!mwExist) return "Player";
+	if (!mwExist) return s_userName;
 	// now we have mw object, get the username
-	s_userName = emscripten_run_script_string("mw.user.getName()");
-	return strcmp(s_userName, "null") != 0 ? s_userName : "Player";
+	memcpy((char *)s_userName, emscripten_run_script_string("mw.user.getName()"), 255);
+	return strncmp(s_userName, "null", 4) != 0 ? s_userName : "Player";
 #elif defined(_WIN32)
 
 	static string	s_userName;
