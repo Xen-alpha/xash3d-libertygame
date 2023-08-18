@@ -279,8 +279,8 @@ void CMenuMain::_Init( void )
 	AddItem( background );
 	AddItem( banner );
 
-	if ( EngFuncs::GetCvarFloat( "developer" ))
-		AddItem( console );
+	// if ( EngFuncs::GetCvarFloat( "developer" ))
+	AddItem( console );
 
 	AddItem( disconnect );
 	AddItem( resumeGame );
@@ -296,10 +296,10 @@ void CMenuMain::_Init( void )
 	if ( bCustomGame )
 		AddItem( customGame );
 
-	AddItem( previews );
-	AddItem( quit );
-	AddItem( minimizeBtn );
-	AddItem( quitButton );
+	// AddItem( previews );
+	// AddItem( quit );
+	// AddItem( minimizeBtn );
+	// AddItem( quitButton );
 }
 
 /*
