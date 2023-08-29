@@ -1,8 +1,6 @@
-CC ?= gcc
+CC := /mnt/d/GitHub/emscripten/emcc
+CXX := /mnt/d/GitHub/emscripten/em++
 
-ifeq ($(CC),cc)
-    CC := gcc
-endif
 my-dir := $(shell pwd)
 PROJECT_DIR ?= $(shell pwd)
 MICRONDK_DIR ?= $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
