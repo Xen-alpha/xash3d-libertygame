@@ -8,8 +8,8 @@
   "ExpandedNodes": [
     "",
     "\\engine",
-    "\\engine\\vtflib",
-    "\\engine\\vtflib\\libsquish"
+    "\\engine\\vtflib"
   ],
+  "SelectedNode": "\\engine\\vtflib\\MemoryReader.cpp",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,15 @@
+.xash-render { 
+	border: 0px none; 
+	background-color: black;
+	
+	padding-right: 0;
+	margin-left: auto; 
+	margin-right: auto; 
+	display: block;
+}
+
+#xash-fullscreen {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
