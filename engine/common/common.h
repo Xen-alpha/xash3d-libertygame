@@ -168,12 +168,12 @@ typedef enum
 #include "crtlib.h"
 #include "base_cmd.h"
 
-#define XASH_VERSION	"0.19.3"		// engine current version
+#define XASH_VERSION	"0.19.4-libertygame"		// engine current version
 // since this fork have own version, this is just left for compatibility
 #define BASED_VERSION	0.98f
 
 // generic update page, see ShellExecute
-#define XASH_UPDATE_PAGE "https://github.com/FWGS/xash3d/releases/latest"
+#define XASH_UPDATE_PAGE "https://github.com/Xen-alpha/xash3d-libertygame"
 
 // PERFORMANCE INFO
 #define MIN_FPS         	15.0		// host minimum fps value for maxfps.

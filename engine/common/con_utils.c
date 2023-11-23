@@ -622,6 +622,7 @@ qboolean Cmd_GetSavesList( const char *s, char *completedname, int length )
 	int		i, numsaves;
 
 	t = FS_Search( va( "save/%s*.sav", s ), true, true );	// lookup only in gamedir
+
 	if( !t ) return false;
 
 	FS_FileBase( t->filenames[0], matchbuf ); 

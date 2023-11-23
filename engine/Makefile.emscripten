@@ -14,8 +14,8 @@
 ##############################################
 
 
-CC = /mnt/d/GitHub/emscripten/emcc --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
-CXX = /mnt/d/GitHub/emscripten/em++ --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
+CC = ~/emscripten/emcc --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
+CXX = ~/emscripten/em++ --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
 # async mode - produces very large scripts. Unuseful with shared libraries
 ASYNC ?= 0
 

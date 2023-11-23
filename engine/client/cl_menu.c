@@ -811,6 +811,7 @@ static char **pfnGetFilesList( const char *pattern, int *numFiles, int gamediron
 	if( t ) Mem_Free( t ); // release prev search
 
 	t = FS_Search( pattern, true, gamedironly );
+
 	if( !t )
 	{
 		if( numFiles ) *numFiles = 0;

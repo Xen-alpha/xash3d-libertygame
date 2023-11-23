@@ -2273,6 +2273,7 @@ used for reload game after player death
 const char *SV_GetLatestSave( void )
 {
 	search_t	*f = FS_Search( "save/*.sav", true, true );	// lookup only in gamedir
+
 	int	i, found = 0;
 	int	newest = 0, ft;
 	string	savename;	
