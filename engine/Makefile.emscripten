@@ -14,8 +14,8 @@
 ##############################################
 
 
-CC = /mnt/d/GitHub/emscripten/emcc --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
-CXX = /mnt/d/GitHub/emscripten/em++ --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
+CC = ~/emscripten/emcc --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
+CXX = ~/emscripten/em++ --llvm-lto 3 -s INLINING_LIMIT=10 -s USE_SDL=2 -s ASSERTIONS=1
 # async mode - produces very large scripts. Unuseful with shared libraries
 ASYNC ?= 0
 
@@ -36,8 +36,8 @@ ifeq ($(EMSCRIPTEN_SIMD),1)
  CC += -s SIMD=1
  CXX += -s SIMD=1
 endif
-CFLAGS =-Os -g0 -Wall -Wextra -Wsign-compare -Wno-unknown-pragmas -Wno-missing-field-initializers -Wno-unused-parameter
-obj/common/launcher.o : override CFLAGS = -O0 -g0
+CFLAGS =-Os -g2 -Wall -Wextra -Wsign-compare -Wno-unknown-pragmas -Wno-missing-field-initializers -Wno-unused-parameter
+obj/common/launcher.o : override CFLAGS = -O0 -g2
 LDFLAGS =
 LIBS = -lm
 LBITS := $(shell getconf LONG_BIT)
@@ -136,7 +136,7 @@ endif
 OBJS = $(patsubst %.c,obj/%.o,$(SRCS))
 
 $(OUTPUT_DIR)/xash$(SIMD_SUF).html: $(OBJS) $(OBJS_CPP) platform/emscripten/shell.html
-	EMCC_FORCE_STDLIBS=1 $(CXX) -O3 --js-opts 1 -s INLINING_LIMIT=10 -s ELIMINATE_DUPLICATE_FUNCTIONS=1 -s AGGRESSIVE_VARIABLE_ELIMINATION=1 -s LEGACY_GL_EMULATION=1 -s UNALIGNED_ACCESS_FUNCTION_LIST=\"platform/emscripten/unaligned.txt\"  --shell-file platform/emscripten/shell.html -s NO_EXIT_RUNTIME=0 -s LZ4=1 -s -g0 -o "$@" -s MAIN_MODULE=1 -s TOTAL_MEMORY=150994944 -fvisibility=hidden $(LDFLAGS) $(OBJS) $(OBJS_CPP) $(LIBS)
+	EMCC_FORCE_STDLIBS=1 $(CXX) -O3 --js-opts 1 -s INLINING_LIMIT=10 -s ELIMINATE_DUPLICATE_FUNCTIONS=1 -s AGGRESSIVE_VARIABLE_ELIMINATION=1 -s LEGACY_GL_EMULATION=1 -s UNALIGNED_ACCESS_FUNCTION_LIST=\"platform/emscripten/unaligned.txt\"  --shell-file platform/emscripten/shell.html -s NO_EXIT_RUNTIME=0 -s LZ4=1 -s -g2 -o "$@" -s MAIN_MODULE=1 -s TOTAL_MEMORY=150994944 -fvisibility=hidden $(LDFLAGS) $(OBJS) $(OBJS_CPP) $(LIBS)
 
 
 
