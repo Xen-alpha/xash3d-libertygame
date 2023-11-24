@@ -834,7 +834,7 @@ void Con_Init( void )
 	con_black = Cvar_Get( "con_black", "0", CVAR_ARCHIVE, "make console black like a nigga" );
 	con_fontscale = Cvar_Get( "con_fontscale", "1.0", CVAR_ARCHIVE, "scale font texture" );
 	con_fontnum = Cvar_Get( "con_fontnum", "-1", CVAR_ARCHIVE, "console font number (0, 1 or 2), -1 for autoselect" );
-	vgui_utf8 = Cvar_Get( "vgui_utf8", "1", CVAR_ARCHIVE, "enable utf-8 support for vgui text" );
+	vgui_utf8 = Cvar_Get( "vgui_utf8", "0", CVAR_ARCHIVE, "enable utf-8 support for vgui text" );
 
 	Con_CheckResize();
 
