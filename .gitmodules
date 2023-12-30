@@ -1,3 +1,4 @@
 [submodule "The-Metro-Gate"]
 	path = The-Metro-Gate
 	url = https://github.com/Xen-alpha/The-Metro-Gate.git
+	branch = main
