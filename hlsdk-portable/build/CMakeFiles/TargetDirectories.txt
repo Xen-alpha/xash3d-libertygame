@@ -1,8 +1,0 @@
-/home/senouis/xash3d/hlsdk-portable/build/CMakeFiles/edit_cache.dir
-/home/senouis/xash3d/hlsdk-portable/build/CMakeFiles/rebuild_cache.dir
-/home/senouis/xash3d/hlsdk-portable/build/cl_dll/CMakeFiles/client.dir
-/home/senouis/xash3d/hlsdk-portable/build/cl_dll/CMakeFiles/edit_cache.dir
-/home/senouis/xash3d/hlsdk-portable/build/cl_dll/CMakeFiles/rebuild_cache.dir
-/home/senouis/xash3d/hlsdk-portable/build/dlls/CMakeFiles/server.dir
-/home/senouis/xash3d/hlsdk-portable/build/dlls/CMakeFiles/edit_cache.dir
-/home/senouis/xash3d/hlsdk-portable/build/dlls/CMakeFiles/rebuild_cache.dir
